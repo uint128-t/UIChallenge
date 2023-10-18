@@ -1,5 +1,5 @@
-var currentLevel = 0;
 var gameLevel = parseInt(localStorage["level"])||0;
+var currentLevel = gameLevel;
 var game = document.getElementById("game")
 changelevel(gameLevel)
 function changelevel(level){
@@ -31,7 +31,7 @@ function backLevel(){
     changelevel(currentLevel)
 }
 addEventListener("message",(e)=>{
-    if (e.data = "advance"){
+    if (e.data == "advance"){
         advanceLevel()
     }
 })

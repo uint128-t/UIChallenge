@@ -1,1 +1,50 @@
-2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="instruction"></div>
+    <input type="text" id="answer">
+    <button onclick="checkAnswer()">OK</button>
+    <br>
+    <select name="language" onchange="chlang(this.value)">
+        <option value="ran" class="fakelang"></option>
+        <option value="ran" class="fakelang"></option>
+        <option value="ran" class="fakelang"></option>
+        <option value="ran" class="fakelang"></option>
+        <option value="ran" class="fakelang"></option>
+        <option value="english">English</option>
+    </select>
+    <script>
+        function randword(len){
+            let word = ""
+            for (let i=0;i<len;i++){
+                word += "qwertyuiopasdfghjklzxcvbnm".charAt(Math.floor(Math.random()*26))
+            }
+            return word
+        }
+        function chlang(lang){
+            if (lang == "english"){
+                document.getElementById("instruction").innerText = `say the number sixty-four`
+            } else{
+                language()
+            }
+        }
+        function language(){
+            document.getElementById("instruction").innerText = `${randword(3)} ${randword(3)} ${randword(6)} ${randword(10)}`
+        }
+        document.querySelectorAll(".fakelang").forEach((e)=>{
+            e.innerText = randword(Math.floor(Math.random()*5+5))
+        })  
+        function checkAnswer(){
+            if (document.getElementById("answer").value == "64"){
+                parent.postMessage('advance','*')
+            }
+        }
+        language()
+    </script>
+</body>
+</html>
