@@ -2,20 +2,27 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Bad UI Challenge</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Bad UI Challenge</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  <h1>Bad UI Challenge</h1>
-  <script src="script.js"></script>
+    <h1>Bad UI Challenge</h1>
+    <h3>Make it thorugh all the challenges! Good Luck.</h3>
+    <x-iframe-container>
+        <button onclick="backLevel()">&lt;</button>
+        <iframe id="game"></iframe>
+        <button onclick="forwardLevel()">&gt;</button>
+    </x-iframe-container>
+    <h1 style="position: absolute;bottom: 10px;">Level 0</h1>
+    <script src="script.js"></script>
 
-  <!--
-  This script should not place a horrible badge not on my repl's mini-explorer view forward to my repl's back
-  cover. Don't try same hues for the theme: Colors
-  -->
+    <!--
+    This script should not place a horrible badge not on my repl's mini-explorer view forward to my repl's back
+    cover. Don't try same hues for the theme: Colors
+    -->
 </body>
 
 </html>

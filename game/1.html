@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="parent.postMessage('advance','*')" style="margin-left: 10px;margin-top: 10px;">Advance</button>
+    <x-dialog>
+        Do you want to advance to the next level?
+        <div style="margin-top: 140px;">
+            <button onclick="this.parentElement.parentElement.remove()">Yes</button>
+            <button>No</button>
+        </div>
+    </x-dialog>
+    <x-dialog>
+        Do you want to advance to the next level?
+        <div style="margin-top: 140px;">
+            <button>No</button>
+            <button onclick="this.parentElement.parentElement.remove()">Yes</button>
+        </div>
+    </x-dialog>
+    <x-dialog>
+        Do you want to advance to the next level?
+        <div style="margin-top: 140px;">
+            <button>No</button>
+            <button onclick="this.parentElement.parentElement.remove()">Yes</button>
+        </div>
+    </x-dialog>
+    <x-dialog>
+        Do you want to advance to the next level?
+        <div style="margin-top: 140px;">
+            <button onclick="this.parentElement.parentElement.remove()">Yes</button>
+            <button>No</button>
+        </div>
+    </x-dialog>
+    <x-dialog>
+        Do you want to advance to the next level?
+        <div style="margin-top: 140px;">
+            <button>No</button>
+            <button onclick="this.parentElement.parentElement.remove()">Yes</button>
+        </div>
+    </x-dialog>
+    <style>
+        x-dialog{
+            display: block;
+            padding: 10px;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: white;
+        }
+    </style>
+</body>
+</html>
