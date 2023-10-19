@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Please enter your phone number
+    <div id="nbr">0</div>
+    <input type="range" min="0" max="10000000000" id="phone" style="width: 200vw;" oninput="document.getElementById('nbr').innerText = this.value">
+    Your phone number is 647-798-7421
+    <button onclick="if (document.getElementById('phone').value == 6477987421)parent.postMessage('advance','*')">Advance</button>
+</body>
+</html>

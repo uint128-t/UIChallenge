@@ -21,7 +21,6 @@ iframe{
     flex-grow: 1;
     height: 50vh;
     border: none;
-    padding: 20px;
 }
 button{
     background-color: transparent;
